@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="icon" href="file_type_homeassistant_icon_130543.ico">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body class="page-body">
@@ -16,7 +17,7 @@
                 <img class="header-logo" src="/img/logo.png" width="220" height="68" alt="Logo">
                 <label for="header-search">Поиск:</label>
                 <input class="header-search" type="search" name="header-search">
-            <ul class="main-header-top-link"> 
+            <ul class="main-header-top-links"> 
                 <li>
                     Закладки: 0
                 </li>
@@ -43,13 +44,13 @@
         </section>
         <section class="main-header-bottom">
             <ul class="link-list link-list-main-header">
-                <li class="link-list-item">Главная</li>
-                <li class="link-list-item">Компания</li>
-                <li class="link-list-item">Каталог</li>
-                <li class="link-list-item">Новости</li>
-                <li class="link-list-item">Спецпредложения</li>
-                <li class="link-list-item">Доставка</li>
-                <li class="link-list-item">Контакты</li>
+                <li class="link-list-item"> <a href="#">Главная</a> </li>
+                <li class="link-list-item"> <a href="#">Компания</a> </li>
+                <li class="link-list-item"> <a href="#">Каталог</a> </li>
+                <li class="link-list-item"> <a href="#">Новости</a> </li>
+                <li class="link-list-item"> <a href="#">Спецпредложения</a> </li>
+                <li class="link-list-item"> <a href="#">Доставка</a> </li>
+                <li class="link-list-item"> <a href="#">Контакты</a> </li>
             </ul>
         </section>
     </header>
@@ -70,13 +71,11 @@
                     <a href="#">для стройки</a>
                 </li>
                 <li class="category-list-item">
-                    <div class="drill-container">
-                        <h3>Перфораторы</h3>
-                        Настоящие мужские игрушки
-                    </div>
+                    <h3>Перфораторы</h3>
+                    <p class="perf-description">Настоящие мужские игрушки</p>
                     <button class="button-prew"><</button>
                     <button class="button-next">></button>
-                    <a class="button button-category-list" href="#">ОТКРЫТЬ КАТАЛОГ</a>
+                    <a class="button-category-list" href="#">ОТКРЫТЬ КАТАЛОГ</a>
                 </li>
                 <li class="category-list-item">
                     <h3>Скидки 50%</h3>
@@ -90,14 +89,16 @@
         </section>
            
         <section class="popular-goods">
-            <h2>Популярные товары:</h2>
-            <a class="button popular-goods-button" href="#">все поПулярные товары</a>
+            <div class="popular-goods-header">
+                <h2>Популярные товары:</h2>
+                <a class="button popular-goods-button" href="#">все поПулярные товары</a>
+            </div> 
             <ul class="card-list">
                 <li class="card-item">
                     <a href="#">
                         <img src="/img/bosch bfg 9000 popular-goods.jpg" width="184"  height="164" alt="popular goods BOSCH BFG 9000">
                         <p>Перфоратор BOSCH BFG 9000</p>
-                        <span> <s> 32500 Р.</s></span>
+                        <span> 32500 Р.</span>
                         <button>25500 Р.</button>
                     </a>
                 </li>
@@ -105,7 +106,7 @@
                     <a href="#">
                         <img src="/img/bosch bfg 3000 popular-goods.jpg" width="127"  height="112" alt="popular goods BOSCH BFG 3000">
                         <p>Перфоратор BOSCH BFG 3000</p>
-                        <span> <s> 22500 Р.</s></span>
+                        <span> 22500 Р.</span>
                         <button>15500 Р.</button>
                     </a>
                 </li>
@@ -113,7 +114,7 @@
                     <a href="#">
                         <img src="/img/bosch bfg 6000 popular-goods.jpg" width="144"  height="128" alt="popular goods BOSCH BFG 6000">
                         <p>Перфоратор BOSCH BFG 6000</p>
-                        <span> <s> 30500 Р.</s></span>
+                        <span>30500 Р.</span>
                         <button>25500 Р.</button>
                     </a>
                 </li>
@@ -128,8 +129,10 @@
         </section>
 
         <section class="popular-manufacturer">
-            <h2>Популярные ПРОИзводители:</h2>
-            <a class="button popular-manufacturer-button" href="#">все производители</a>
+            <div class="popular-manufacturer-header">
+                <h2>Популярные ПРОИзводители:</h2>
+                <a class="button popular-manufacturer-button" href="#">все производители</a>
+            </div>
             <ul class="manufacturer-list">
                 <li class="manufacturer-item">
                     <a href="#">
@@ -243,14 +246,14 @@
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
                 +7 (812) 555-05-55
             </p>
-            <ul link-list footer-link-list-top>
+            <ul class="link-list footer-link-list-top" >
                 <li> <a href="#">Компания</a> </li>
                 <li> <a href="#">Новости</a> </li>
                 <li> <a href="#">Каталог</a> </li>
                 <li> <a href="#">Доставка</a> </li>
                 <li> <a href="#">Контакты</a> </li>
             </ul>
-            <ul link-list footer-link-list-bottom>
+            <ul class="link-list footer-link-list-bottom" >
                 <li> <a href="#">Материалы</a> </li>
                 <li> <a href="#">Техника</a> </li>
                 <li> <a href="#">Инструмент</a> </li>
@@ -263,9 +266,9 @@
                 Все права защищены
             </p>
             <ul class="social-link">
-                <li> <a href="#">vk</a> </li>
-                <li> <a href="#">fb</a> </li>
-                <li> <a href="#">ins</a> </li>
+                <li> <a class="vk" href="#"></a> </li>
+                <li> <a class="fb" href="#"></a> </li>
+                <li> <a class="ins" href="#"></a> </li>
             </ul>
             <p class="feedback">
                 Обратная связь:
@@ -279,23 +282,24 @@
     </footer>
 <!------------------------------POPUPs------------------------->
     <section class="popup-write-us">
-        <form action="https://echo.htmlacademy.ru/" method="get">
-        <label for="name-popup">Ваше имя:</label>
-        <input type="text" placeholder="Имя Фамилия" id="name-popup">
-        <label for="email-popup">Ваш e-mail:</label>
-        <input type="email" placeholder="email@example.com" id="email-popup">
-        <label for="textarea-popup">Текст письма:</label>
-        <textarea name="popup message" id="textarea-popup" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        <button class="button button-popup-write-us" type="submit">Отправить</button>
+        <form class="popup-write-us-form" action="https://echo.htmlacademy.ru/" method="get">
+            <label for="name-popup">Ваше имя:</label>
+            <input type="text" placeholder="Имя Фамилия" id="name-popup">
+            <label for="email-popup">Ваш e-mail:</label>
+            <input type="email" placeholder="email@example.com" id="email-popup">
+            <label for="textarea-popup">Текст письма:</label>
+            <textarea name="popup message" id="textarea-popup" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+            <div class="submit-container">
+                <button class="button button-popup-write-us" type="submit">Отправить</button>
+            </div>    
         </form>
         <div class="popup-button-container">
-            <button class="button-popup-close" type="button">X</button>
+            <button class="button-popup-close" type="button"></button>
         </div>
     </section>
-
+<!--MAP POPUP-->
     <section class="popup-map">
-        <!--MAP POPUP-->
-        <button class="button-popup-close" type="button">X</button>
+        <button class="button-popup-close" type="button"></button>
     </section>
 </body>
 </html>
