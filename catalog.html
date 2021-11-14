@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,49 +13,69 @@
 </head>
 <body class="page-body">
     <header class="main-header">
-        <section class="main-header-top"> 
-                <img class="header-logo" src="/img/logo.png" width="220" height="68" alt="Logo">
-                <label for="header-search">Поиск:</label>
-                <input class="header-search" type="search" name="header-search">
-            <ul class="main-header-top-links"> 
-                <li>
-                    Закладки: 0
-                </li>
-                <li>
-                    Корзина: 0
-                </li>
-                <li>
-                    Оформить заказ
-                </li>
-            </ul>
-        </section>
-        <section class="main-header-middle">
-            <p class="header-description">
-                Интернет-магазин <br>
-                строительных материалов <br>
-                и инструментов для ремонта
-            </p>
-            <p class="header-contacts">
-                <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-                г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            </p>
-            <a class="header-enter-link" href="#">Войти</a>
-            <a class="header-registration-link" href="#">Регистрация</a>
-        </section>
-        <section class="main-header-bottom">
-            <ul class="link-list link-list-main-header">
-                <li class="link-list-item"> <a href="#">Главная</a> </li>
-                <li class="link-list-item"> <a href="#">Компания</a> </li>
-                <li class="link-list-item"> <a href="#">Каталог</a> </li>
-                <li class="link-list-item"> <a href="#">Новости</a> </li>
-                <li class="link-list-item"> <a href="#">Спецпредложения</a> </li>
-                <li class="link-list-item"> <a href="#">Доставка</a> </li>
-                <li class="link-list-item"> <a href="#">Контакты</a> </li>
-            </ul>
-        </section>
+   
+        <div class="header-top-bar">
+            <div class="container">
+                <section class="main-header-top"> 
+                    <div class="header-top-logo-search-container">
+                        <img class="header-logo" src="/img/logo.png" width="220" height="68" alt="Logo">
+                        
+                    </div>    
+                    <ul class="main-header-top-links"> 
+                        <li>
+                            <!--<label for="header-search">Поиск:</label>-->
+                            <input class="header-search" type="search" name="header-search" placeholder="Поиск:">
+                        </li>
+                        <li>
+                            <a href="#">Закладки: 0</a>  
+                        </li>
+                        <li>
+                            <a href="#">Корзина: 0</a> 
+                        </li>
+                        <li>
+                            <a href="#">Оформить заказ</a> 
+                        </li>
+                    </ul>    
+                </section>
+            </div> 
+        </div>  
+        <div class="container">
+            <section class="main-header-middle">
+                <p class="header-description">
+                    Интернет-магазин <br>
+                    строительных материалов <br>
+                    и инструментов для ремонта
+                </p>
+                <p class="header-contacts">
+                    <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+                    г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                </p>
+                <div class="header-middle-link-container">
+                    <a class="header-enter-link" href="#">Равшан Джамшутович</a>
+                    <div>
+                        <a class="header-cabinet-link" href="#">Мои заказы</a>
+                        <a class="header-cabinet-link" href="#">Личный кабинет</a>
+                    </div>
+                </div>    
+            </section>
+
+            <section class="main-header-bottom">
+                <ul class="link-list link-list-main-header">
+                    <li class="link-list-item"> <a href="#">Главная</a> </li>
+                    <li class="link-list-item"> <a href="#">Компания</a> </li>
+                    <li class="link-list-item"> <a href="#">Каталог</a> </li>
+                    <li class="link-list-item"> <a href="#">Новости</a> </li>
+                    <li class="link-list-item"> <a href="#">Спецпредложения</a> </li>
+                    <li class="link-list-item"> <a href="#">Доставка</a> </li>
+                    <li class="link-list-item"> <a href="#">Контакты</a> </li>
+                </ul>
+            </section>
+        </div>
     </header>
 
+    
     <main>
+        <div class="container">
             <ul class="bread-crumbs">
                 <li class="bread-crumbs-item"> <a href="#">home</a> </li>
                 <li class="bread-crumbs-item"> <a href="#"> Каталог</a> </li>
@@ -65,6 +85,8 @@
             <div class="h1-container">
                 <h1 class="catalog-name">ПЕРФОРАТОРЫ</h1>
             </div>
+
+        <div class="filter-card-container">
             <section class="catalog-filter">
                 <h2 class="visually-hidden">Фильтр товаров</h2> 
                 <p class="filter">ФИЛЬТР:</p>
@@ -225,14 +247,19 @@
                     <li class="paginator-page page-next"> <a href="#">СЛЕДУЮЩАЯ</a> </li>
                 </ul>
             </section>
+        </div>
+        </div>    
             <section class="catalog-description">
-                <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-                <p>
-                    Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
-                    Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. <br>
-                    В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-                </p>
+                <div class="container">
+                    <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+                    <p>
+                        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
+                        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. <br>
+                        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+                    </p>
+                </div>
             </section>
+         
     </main>
 
     

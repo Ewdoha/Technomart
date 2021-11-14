@@ -20,11 +20,20 @@
 }
 
 /*--------GLOBAL---------*/
-body {
-  font-family: 'Cuprum', Arial, sans-serif;
-  background-color:var(--white);
+
+.page {
+  height: 100%;
 }
 
+.page-body {
+  font-family: 'Cuprum', Arial, sans-serif;
+  background-color:var(--white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: flex-start;
+}
 
 .link-list-item a {
   color: var(--white);
@@ -51,21 +60,53 @@ body {
   margin: -1px;
 }
 
+.container {
+  width:940px;
+  margin: 0 auto;
+}
+
+
+
 /*--------HEADER---------*/
 .main-header {
   background-image: url(/img/top\ background.png);
+  margin-bottom: 59px;
+
+  display: grid;
+
+ 
 }
 
 /*header top*/
+.header-top-bar {
+  background-color:#293449;
+}
+
 .main-header-top {
   font-size: 18px;
   line-height: 24px;
   color:var(--white);
   background-color: rgba(41, 52, 73, 1);
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+}
+
+.header-top-logo-search-container {
+  position: relative;
+}
+
+.header-logo {
+  position: absolute;
 }
 
 .main-header-top-links {
-  list-style: none;
+    justify-self: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .main-header-top-links li:nth-child(3) {
@@ -73,6 +114,12 @@ body {
 }
 
 /*header middle*/
+.main-header-middle {
+
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .header-description {
   font-style: italic;
   font-size: 16px;
@@ -110,16 +157,45 @@ body {
 
 /*header bottom*/
 
+.main-header-bottom {
+ 
+}
+
 .link-list-main-header {
   background-color: #32425C;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
+/*
+outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 255, 0.7);
+  outline-offset: -5px;
+   outline: 5px solid rgba(255, 203, 5, 0.7);
+  outline-offset: -5px;
+*/
+
 /*CATEGORY*/
+
+.category {
+  margin-bottom: 59px;
+}
 
 .category-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .category-list-item a {
@@ -131,6 +207,8 @@ body {
 
 .category-list-item h3 {
   color:var(--white);
+  margin: 0;
+  padding: 0;
 }
 
 .category-list-item:nth-child(1) {
@@ -148,6 +226,10 @@ body {
 .category-list-item:nth-child(4) {
  background-image:url(/img/Перфораторы.png);
  background-repeat: no-repeat;
+ grid-row-start: 2;
+ grid-row-end: 4;
+ grid-column-start: 1;
+ grid-column-end: 3;
 }
 
 .category-list-item:nth-child(4) h3 {
@@ -184,8 +266,15 @@ body {
 
 /*POPULAR GOODS*/
 
+.popular-goods {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  margin-bottom: 59px;
+}
+
 .popular-goods-header {
   background-color:#F9F5F0;
+  margin-bottom: 20px;
 }
 
 .popular-goods-header h2 {
@@ -194,10 +283,17 @@ body {
   line-height: 30px;
   text-transform: uppercase;
   font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 .card-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .card-item {
@@ -238,8 +334,15 @@ body {
 
 /*POPULAR MANUFACTURERS*/
 
+.popular-manufacturer {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  margin-bottom: 59px;
+}
+
 .popular-manufacturer-header {
   background-color:#F9F5F0;
+  margin-bottom: 20px;
 }
 
 .popular-manufacturer-header h2{
@@ -248,10 +351,18 @@ body {
   line-height: 30px;
   text-transform: uppercase;
   font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 .manufacturer-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
 }
 
 .manufacturer-item {
@@ -261,7 +372,10 @@ body {
 /*SERVICES*/
 
 .services {
-  background-color:var(--basic-background)
+  background-color:var(--basic-background);
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 .services h2 {
@@ -269,6 +383,8 @@ body {
   line-height: 30px;
   color: var(--dark);
   font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 .services p{
@@ -280,6 +396,8 @@ body {
 
 .services-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .services-list li {
@@ -302,11 +420,25 @@ body {
   color: #32425C;
 }
 
-.delivery h2{
-  color: #32425C;
+.delivery-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }
 
+.delivery h2{
+  color: #32425C;
+  margin: 0;
+  padding: 0;
+}
+
+
 /*description-contacts*/
+
+.description-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 70px;
+}
 
 .description h2 {
   font-size: 30px;
@@ -348,8 +480,14 @@ body {
 
 
 /*footer-top*/
+.footer-top-bar {
+  background-color: #32425C;
+}
+
 .footer-top {
   background-color:#32425C;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .footer-top p {
@@ -360,6 +498,8 @@ body {
 
  .footer-link-list-top {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-link-list-top a {
@@ -371,6 +511,8 @@ body {
 
 .footer-link-list-bottom {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-link-list-bottom a {
@@ -382,18 +524,28 @@ body {
 
 /*footer-bottom*/
 
+.footer-bottom-bar {
+  background-color: #293449;
+}
+
 .footer-bottom {
   background-color: #293449;
+  display: grid;
+  grid-template-columns: 1fr 1fr min-content min-content;
 }
 
 .copyright {
   color: var(--white);
   font-size: 16px;
   line-height: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 .social-link {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
  
 .vk {
@@ -448,12 +600,23 @@ body {
   text-decoration: none;
 }
 
+
+
 /*POPUP*/
 
 /*popup-write-us*/
 
 .popup-write-us {
   border-top: 7px solid var(--basic-red);
+  width: 620px;
+  height: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.popup-write-us-form {
+  display: grid;
+  grid-template-rows: 1fr min-content;
 }
 
 .popup-write-us-form input, textarea{
@@ -482,9 +645,18 @@ body {
   padding: 15px;
   cursor: pointer;
   text-align: center;
+  position: absolute;
+  right:11px;
+  top:21px;
 }
 /*MAP POPUP*/
 
 .popup-map {
+  width:943px;
+  height: 449px;
+  background-image: url(/img/map-popup.png);
+  background-repeat: no-repeat;
   border-top: 7px solid var(--basic-red);
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  margin: 0 auto;
 }
