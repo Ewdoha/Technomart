@@ -64,6 +64,7 @@
   .container {
     width:940px;
     margin: 0 auto;
+    padding: 0 10px;
   }
   
   
@@ -86,40 +87,79 @@
     background-color: rgba(41, 52, 73, 1);
   
     display: grid;
-    grid-template-columns: 1fr 2fr;
-  
+    grid-template-columns: min-content 1fr;
+    margin-bottom:46px;
   }
   
   .header-top-logo-search-container {
     position: relative;
   }
+
+  .header-search {
+    padding: 9px 0;
+    padding-left: 42px;
+    width:271px;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: transparent;
+    border:none;
+    color: var(--white);
+  }
+
+  .header-search::placeholder{
+    color: var(--white);
+  }
+
+
   
   .header-logo {
+    display: inline-block;
     position: absolute;
+    width:220px;
+    height: 47px;
+    text-decoration: none;
+    background-image:url(/img/Object.svg);
   }
   
   .main-header-top-links {
-    justify-self: flex-end;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: end;
+    text-align: center;
+  }
+
+  .main-header-top-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    line-height: 24px;
   }
   
   .main-header-top-links li:nth-child(2) {
-  background-color: var(--basic-red);
-}
+    padding: 9px 38px 9px 35px;
+  }
 
   .main-header-top-links li:nth-child(3) {
+  background-color: var(--basic-red);
+  padding: 9px 21px 9px 35px;
+}
+
+  .main-header-top-links li:nth-child(4) {
     background-color: var(--basic-green);
+    padding: 9px 16px 9px 19px;
   }
   
   
   /*header middle*/
   .main-header-middle {
   
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: end;
+    margin-bottom:42px;
+    text-align: center;
   }
   
   .header-description {
@@ -127,50 +167,81 @@
     font-size: 16px;
     line-height: 23px;
     color:var(--basic-red);
+    text-align: left;
+    margin-right: 93px;
   }
   
   .header-contacts {
     color:#32425C;
     font-size: 14px;
     line-height: 24px;
+    margin-right: 53px;
   }
-  
-  .header-contacts a {
-    text-decoration: none;
-    color:var(--basic-red);
+
+  .tel-container{
     border: 3px solid var(--white);
+    padding: 4px 45px 5px 74px;
+    margin-bottom: 3px;
   }
   
+  .tel-container a {
+    text-decoration: none;
+    color:var(--basic-red); 
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+  }
+  
+.enter-link-container{
+  background-color:var(--white);
+  padding: 12px 57px 12px 56px;
+  margin-bottom: 7px;
+}
+
   .header-enter-link {
     font-size: 21px;
     line-height: 21px;
     text-decoration: none;
     color: var(--dark);
-    background-image: url(/img/header-middle-button-background.png);
   }
-  
-  .header-registration-link {
-    font-size: 21px;
-    line-height: 21px;
+
+  .cabinet-link-container a{
+    color: #32425C;
+    font-size: 16px;
+    line-height: 18px;
     text-decoration: none;
-    color: var(--dark);
-    background-image: url(/img/header-middle-button-background.png);
+    
   }
+
+  .header-cabinet-link:first-child{
+    margin-right: 33px;
+  }
+
+  
+  
   
   /*header bottom*/
   
-  .main-header-bottom {
-   
+  .main-header-bottom{
+    padding-bottom: 60px;
   }
   
   .link-list-main-header {
+    display: flex;
+    justify-content:space-evenly;
     background-color: #32425C;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
- 
+  .link-list-item a{
+    display: inline-block;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+ }
 
   /*CATALOG*/
 
@@ -184,6 +255,11 @@
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
+    display: flex;
+    }
+
+    .bread-crumbs-item{
+      margin-right: 41px;
     }
 
   .bread-crumbs a {
@@ -197,6 +273,7 @@
 
     .h1-container {
         background-color: #F2F6F8;
+        height: 89px;
         margin-bottom: 20px;
     }
 
@@ -206,6 +283,9 @@
         line-height: 30px;
         margin: 0;
         padding: 0;
+        padding-left: 29px;
+        padding-top: 29px;
+        padding-bottom: 29px;
     }
 
     /*FILTER*/
@@ -226,6 +306,8 @@
     line-height: 18px;
     margin: 0;
     padding: 0;
+    padding: 10px 0 10px 18px;
+    margin-bottom: 14px;
     }
 
     .price-filter {
@@ -239,12 +321,29 @@
         font-weight: bold;
         font-size: 17px;
         line-height: 30px;
-        
+        margin-bottom: 11px;
     }
 
     .price-filter-input{
         background-color:#F7F3EC;
-        padding: 20px;
+        
+        height: 80px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 9px;
+    }
+
+     .price-filter span:nth-child(3), .price-filter span:nth-child(5){
+      display: inline-block;
+      width:95px;
+      height: 38px;
+      background-color:var(--basic-greylight);
+      margin-bottom: 25px;
+    }
+
+    .line{
+      margin-bottom: 16px;
     }
 
     .manufacturers-filter {
@@ -258,6 +357,8 @@
         font-weight: bold;
         font-size: 17px;
         line-height: 30px;
+        margin-bottom: 15px;
+        
     }
 
     .manufacturers-filter-list {
@@ -266,11 +367,17 @@
         padding: 0;
 }
 
+.manufacturers-filter-item{
+  margin-bottom:20px ;
+}
+
     .manufacturers-filter-item label {
         font-family: PT Sans;
         font-size: 15px;
         line-height: 19px;
         text-transform:uppercase;
+        margin: 0;
+        padding: 0;
     }
 
     /**line**/
@@ -290,12 +397,18 @@
         font-weight: bold;
         font-size: 17px;
         line-height: 30px;
+        margin-bottom: 20px;
     }
 
     .power-filter-list {
         list-style: none;
         margin: 0;
         padding: 0;
+        margin-bottom: 37px;
+    }
+
+    .power-filter-item{
+      margin-bottom: 22px;
     }
 
     .power-filter-item label {
@@ -311,6 +424,9 @@
         font-family: PT Sans;
         font-size: 13px;
         line-height: 18px;
+        width: 220px;
+        height: 38px;
+        cursor: pointer;
     }
 
     /*sort-list*/
@@ -324,12 +440,18 @@
     .sort-container{
         background-color:#F7F3EC;
         margin-bottom: 28px;
+        
+       
     }
 
     .sort-list {
         list-style: none;
         margin: 0;
         padding: 0;
+        display:flex;
+        justify-content: space-around;
+        height: 38px;
+        align-items:center
     }
 
     .sort {
@@ -337,7 +459,7 @@
         font-size: 13px;
         line-height: 18px;
         margin: 0;
-        padding: 0;
+        padding: 0;  
     }
 
     .sort-list-item {
@@ -345,12 +467,18 @@
         font-size: 13px;
         line-height: 18px;
         color: rgba(0, 0, 0, 0.3);
-
     }
 
-    .sort-list-item:nth-child(1) {
+    .sort-list li:nth-child(1){
+      margin-right: 140px;
+    }
+
+    .sort-list-item:nth-child(2) {
         color: var(--basic-red);
+       
     }
+
+ 
 
     /*card*/
 
@@ -360,10 +488,8 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr ;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
         margin-bottom: 48px;
       }
       
@@ -371,11 +497,29 @@
         border:1px solid #EAEAEA;
         font-family: PT Sans;
         font-weight: bold;
+        width:218px;
+        min-height: 318px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        text-align: center;
+      }
+
+      .card-item:nth-child(3n) {
+        margin-right:0px;
       }
       
       .card-item a {
         text-decoration: none; 
         font-family: PT Sans;
+      }
+
+      .card-item img {
+        width: 144px;
+        height: 128px;
       }
       
       .card-item a p{
@@ -383,24 +527,37 @@
         font-size: 18px;
         line-height: 20px;
         font-family: PT Sans;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 7px;
       }
       
       .card-item a span {
+        display:block;
         color: #A9A9A9;
         text-decoration: line-through;
         font-size: 17px;
         line-height: 18px;
         font-family: PT Sans;
+        margin-bottom: 13px;
+      }
+
+      .card-item:nth-child(6) a p, .card-item:nth-child(9) a p{
+        margin-bottom: 39px;
       }
       
       .card-item button {
         font-family: PT Sans;
         color: var(--white);
-        background-color:var(--basic-red);
+        background-color:transparent;
         border:none;
         font-weight: bold;
         font-size: 17px;
         line-height: 18px;
+        width:141px;
+        height: 38px;
+        background-image:url(/img/red-button.png);
+        cursor: pointer;
       }
 
       
