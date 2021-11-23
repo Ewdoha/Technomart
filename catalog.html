@@ -17,11 +17,11 @@
         <div class="header-top-bar">
             <div class="container">
                 <section class="main-header-top"> 
-                    <div class="header-top-logo-search-container">
-                        <a class="header-logo" href="#"></a>
-                        
-                    </div>    
+                     
                     <ul class="main-header-top-links"> 
+                        <li> 
+                            <a class="header-logo" href="#"><span></span></a>
+                        </li>
                         <li>
                             <!--<label for="header-search">Поиск:</label>-->
                             <input class="header-search" type="search" name="header-search" placeholder="Поиск:">
@@ -83,7 +83,7 @@
     <main>
         <div class="container">
             <ul class="bread-crumbs">
-                <li class="bread-crumbs-item"> <a href="#">home</a> </li>
+                <li class="bread-crumbs-item"> <a href="#">555</a> </li>
                 <li class="bread-crumbs-item"> <a href="#"> Каталог</a> </li>
                 <li class="bread-crumbs-item"> <a href="#">Инструмент</a> </li>
                 <li class="bread-crumbs-item">Перфораторы</li>
@@ -99,35 +99,47 @@
                 <form action="https://echo.htmlacademy.ru/" method="get">
                     <fieldset class="price-filter">
                         <legend>ЦЕНА:</legend>
-                        <div class="price-filter-input">
-                            <input type="range" min="0" max="30000" step="100">
-                        </div>    
-                        <span>0</span>
-                        <span>-</span>
-                        <span>30000</span>
+                        <div class="range-filter">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min" tabindex="0"></div>
+                                <div class="toggle toggle-max" tabindex="0"></div>
+                            </div>
+                            <div class="price-controls">
+                                <label class="min-price">
+                                   <input type="number" name="min-price" value="0">
+                                </label>
+                                <span>-</span>
+                                <label class="max-price">
+                                    <input type="number" name="max-price" value="30000">
+                                 </label>
+                            </div>
+                        </div>
                     </fieldset>
                     <div class="line"></div>
                     <fieldset class="manufacturers-filter">
                         <legend>ПРОИЗВОДИТЕЛИ:</legend>
                         <ul class="manufacturers-filter-list">
                             <li class="manufacturers-filter-item">
-                                <input type="checkbox" name="BOSCH" id="BOSCH-filter" checked> 
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="BOSCH" id="BOSCH-filter" checked> 
                                 <label for="BOSCH-filter"> BOSCH</label>
                             </li>
                             <li class="manufacturers-filter-item">
-                                <input type="checkbox" name="ИНТЕРСКОЛ" id="ИНТЕРСКОЛ-filter">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="ИНТЕРСКОЛ" id="ИНТЕРСКОЛ-filter">
                                 <label for="ИНТЕРСКОЛ-filter">ИНТЕРСКОЛ</label>
                             </li>
                             <li class="manufacturers-filter-item">
-                                <input type="checkbox" name="MAKITA" id="MAKITA-filter" checked>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="MAKITA" id="MAKITA-filter" checked>
                                 <label for="MAKITA-filter">MAKITA</label>
                             </li>
                             <li class="manufacturers-filter-item">
-                                <input type="checkbox" name="Dewalt" id="Dewalt-filter">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Dewalt" id="Dewalt-filter">
                                 <label for="Dewalt-filter">Dewalt</label>
                             </li>
                             <li class="manufacturers-filter-item">
-                                <input type="checkbox" name="Hitachi" id="Hitachi-filter">
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Hitachi" id="Hitachi-filter">
                                 <label for="Hitachi-filter">Hitachi</label>
                             </li>
                         </ul> 
@@ -137,11 +149,11 @@
                         <legend>ПИТАНИЕ:</legend>
                         <ul class="power-filter-list">
                             <li class="power-filter-item">
-                                <input type="radio" id="akku-filter" name="power-group" value="battery" checked>
+                                <input class="visually-hidden filter-input-radio" type="radio" id="akku-filter" name="power-group" value="battery" checked>
                                 <label for="akku-filter">Аккумуляторные</label>
                             </li>
                             <li class="power-filter-item">
-                                <input type="radio" id="network-filter" name="power-group" value="network">
+                                <input class="visually-hidden filter-input-radio" type="radio" id="network-filter" name="power-group" value="network">
                                 <label for="network-filter">Сетевые</label>
                             </li>
                         </ul>
@@ -155,12 +167,12 @@
                 <div class="sort-container">
                     <ul class="sort-list">
                         <li class="sort">СОРТИРОВКА:</li>
-                        <li class="sort-list-item"> ПО ЦЕНЕ</li>
-                        <li class="sort-list-item">ПО ТИПУ</li>
-                        <li class="sort-list-item">ПО ФУНКЦИОНАЛУ</li>
+                        <li class="sort-list-item"> <button class="button-sort button-sort-price button-sort-current">ПО ЦЕНЕ</button> </li>
+                        <li class="sort-list-item"> <button class="button-sort button-sort-type">ПО ТИПУ</button> </li>
+                        <li class="sort-list-item"> <button class="button-sort button-sort-function">ПО ФУНКЦИОНАЛУ</button></li>
                         <li class="sort-list-item">
-                            <span> up</span>
-                            <span>down</span> 
+                            <button class="button-sort button-sort-up"><span></span></button>
+                            <button class="button-sort button-sort-down"><span></span></button> 
                         </li>
                     </ul>
                 </div>
@@ -270,9 +282,66 @@
          
     </main>
 
-    
+    <footer>
+        <div class="footer-top-bar">
+            <div class="container">
+                <section class="footer-top">
+                    <div class="footer-top-logo-adress-container">
+                        <a class="footer-logo" href="#"><span></span></a>
+                        <p>
+                            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+                            +7 (812) 555-05-55
+                        </p>
+                    </div>
+                    <div class="footer-top-link-list-container">
+                        <ul class="link-list footer-link-list-top" >
+                            <li> <a href="#">Компания</a> </li>
+                            <li> <a href="#">Новости</a> </li>
+                            <li> <a href="#">Каталог</a> </li>
+                            <li> <a href="#">Доставка</a> </li>
+                            <li> <a href="#">Контакты</a> </li>
+                        </ul>
+                        <ul class="link-list footer-link-list-bottom" >
+                            <div class="li-container">
+                                <li> <a href="#">Материалы</a> </li>
+                                <li> <a href="#">Техника</a> </li>
+                                <li> <a href="#">Инструмент</a> </li>
+                                <li> <a href="#">Спецпредложения</a> </li>
+                            </div>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <section class="footer-bottom">
+                    <p class="copyright">
+                        © 2010–2019 Компания «Техномарт» <br>
+                        Все права защищены
+                    </p>
+                    <ul class="social-link">
+                        <li> <a class="vk" href="#"></a> </li>
+                        <li> <a class="fb" href="#"></a> </li>
+                        <li> <a class="ins" href="#"></a> </li>
+                    </ul>
+                    <div class="feedback-development-container">
+                        <div class="feedback">
+                            <p>Обратная связь:</p> 
+                            <a href="#">mail@htmlacademy.ru</a>
+                        </div>
+                        <div class="development-by">
+                            <p> Разработано —</p>
+                            <a href="#">mail@htmlacademy.ru</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
 
 <!------------------------------POPUPs------------------------->
+<div class="container">
     <section class="catalog-popup">
         <p class="popup-info">Товар добавлен в корзину!</p>
         <div class="popup-button-container">
@@ -281,5 +350,6 @@
         </div>    
         <button class="button-popup-close" type="button"></button>
     </section>
+</div>
 </body>
 </html>

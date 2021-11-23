@@ -94,14 +94,19 @@
                         <h3>Техника</h3>
                         <a href="#">для стройки</a>
                     </li>
+                    
                     <li class="category-list-item-perf">
                         <h3>Перфораторы</h3>
                         <p class="perf-description">Настоящие мужские игрушки</p>
                         <button class="button-prew"></button>
                         <button class="button-next"></button>
-                        <div class="slider"></div>
+                        <div class="slider">
+                            <span class="slider-circle current-circle"></span>
+                            <span class="slider-circle"></span>
+                        </div>
                         <a class="button-category-list" href="#">ОТКРЫТЬ КАТАЛОГ</a>
                     </li>
+                    
                     <li class="category-list-item">
                         <h3>Скидки 50%</h3>
                         <a href="#">На 350 ТОВАРОВ</a>
@@ -151,7 +156,7 @@
                             <button>25500 Р.</button>
                         </a>
                     </li>
-                    <li class="card-item">
+                    <li class="card-item ">
                         <a href="#">
                             <div class="card-item-img-container">
                                 <img src="/img/bosch bfg 2000 popular-goods.jpg" width="127"  height="112" alt="popular goods BFG 2000">
@@ -160,7 +165,7 @@
                             <button>15500 Р.</button>
                         </a>
                     </li>
-                    <li class="card-item card-hidden">
+                    <li class="card-item card-hidden ">
                         <a href="#">
                             <div class="card-item-img-container">
                                 <button>КУПИТЬ</button>
@@ -290,7 +295,7 @@
                     Вы можете забрать товар сами, <br>
                     заехав в наш офис:
                 </p>
-                <img src="/img/map-contacts.png" width="300" height="158" alt="map contacts">
+                <a class="map-image" href="#"><img src="/img/map-contacts.png" width="300" height="158" alt="map contacts"></a> 
                 <a class="button contacts-button" href="#">Заблудились? НапиШИТЕ НАМ!</a>
             </section>
             
@@ -357,6 +362,7 @@
         </div>
     </footer>
 <!------------------------------POPUPs------------------------->
+   
     <section class="popup-write-us">
         <form class="popup-write-us-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="popup-write-us-input-container">
@@ -365,14 +371,14 @@
                         <div>
                             <label for="name-popup">Ваше имя:</label>
                         </div>
-                        <input type="text" placeholder="Имя Фамилия" id="name-popup">   
+                        <input class="user-login" type="text" placeholder="Имя Фамилия" id="name-popup" name="login">   
                     </div>
 
                     <div>
                         <div>
                             <label for="email-popup">Ваш e-mail:</label>
                         </div>
-                        <input type="email" placeholder="email@example.com" id="email-popup">
+                        <input type="email" placeholder="email@example.com" id="email-popup" name="e-mail">
                     </div>
                 </div>
                
@@ -392,7 +398,12 @@
     </section>
 <!--MAP POPUP-->
     <section class="popup-map">
-        <button class="button-popup-close" type="button"></button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20309.076452738092!2d30.472123293521648!3d50.48514667343086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d20f53e21e85%3A0x16c64c7a1540623c!2z0JXQstCw!5e0!3m2!1sru!2sua!4v1637570379183!5m2!1sru!2sua" width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <button class="button-popup-map-close" type="button"></button>
     </section>
+    <script src="/js/index-popup-write-us.js"></script>
+    <script src="/js/index-popup-map.js"></script>
+    <script src="/js/hover-card-item.js"></script>
+    <script src="/js/slider.js"></script>
 </body>
 </html>
